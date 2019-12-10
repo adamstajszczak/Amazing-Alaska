@@ -10,20 +10,102 @@
     href="https://fonts.googleapis.com/css?family=Oswald|Raleway&display=swap"
     rel="stylesheet"
   />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
   <script
     defer
     src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"
   ></script>
   <link rel="stylesheet" href="styles.css" />
-  <style></style>
+  <style>
+    header {
+      background-color: rgba(0, 0, 0, 0.7);
+      position: fixed;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      width: 100%;
+      color: #fff;
+      padding: 0px 100px 0px;
+
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    header a {
+      text-decoration: none;
+      color: white;
+      opacity: 0.6;
+      cursor: pointer;
+    }
+
+    header a:hover {
+      opacity: 1;
+    }
+
+    header nav ul {
+      font-size: 14px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+
+    header nav li {
+      margin: 0 6px;
+    }
+
+    header nav li:first-child {
+      margin-left: 0;
+    }
+
+    header nav li:last-child {
+      margin-right: 0;
+    }
+
+    @media (max-width: 1000px) {
+      header {
+        text-align: center;
+        flex-direction: column;
+        padding: 20px 50px;
+      }
+
+      header img {
+        width: 75%;
+      }
+
+      header nav {
+        justify-content: space-around;
+      }
+
+      header h2 {
+        margin-bottom: 15px;
+      }
+    }
+  </style>
 
   <body id="top">
+    <header>
+      <h2>
+        <a href="#" target="_blank"><img src="img/logo2.png" alt=""/></a>
+      </h2>
+      <nav>
+        <ul>
+          <li><a href="#top">Top</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#getting-around">Travel</a></li>
+          <li><a href="#famous-quotes">Quotes</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#social-media">Links</a></li>
+        </ul>
+      </nav>
+    </header>
     <div id="hero">
       <div id="background-image">
         <h1>Adam Stajszczak Portfolio</h1>
         <h3>Developer who don't know how to develop</h3>
         <a
-          href="https://academy.zenva.com/?zva_src=zenva-homepage"
+          href="files/Adam Stajszczak resume inf.pdf"
           class="btn"
           target="_blank"
           >Check My resume</a
@@ -53,6 +135,43 @@
       <hr />
     </div>
     <!-- ****************************************************** -->
+    <div id="getting-around">
+      <h3 class="title">My intrests</h3>
+      <p>
+        Here are three ways you can use to travel around Alaska represented by
+        font awesome icons. There are many more ways of traveling, but here are
+        three that fit nicely in this section and have icons that you can
+        manipulate like fonts in CSS.
+      </p>
+      <ul class="grid">
+        <li>
+          <i class="fas fa-laptop ico"></i>
+          <h4>IT</h4>
+          <p>
+            A powered flying vehicle with fixed wings and a weight greater than
+            that of the air it displaces.
+          </p>
+        </li>
+        <li>
+          <i class="fas fa-globe ico"></i>
+          <h4>Traveling</h4>
+          <p>
+            A passenger ship used for pleasure voyages, where the voyage itself
+            and the ship's amenities are a part of the experience.
+          </p>
+        </li>
+        <li>
+          <i class="fas fa-space-shuttle ico"></i>
+          <h4>Astronomy</h4>
+          <p>
+            A motor vehicle licensed to transport passengers in return for
+            payment of a fare.
+          </p>
+        </li>
+      </ul>
+    </div>
+    <hr />
+    <!-- ****************************************************** -->
     <div id="gallery" class="photo-gallery">
       <h3 class="title">Gallery</h3>
 
@@ -77,58 +196,18 @@
       </ul>
     </div>
     <hr />
-    <!-- ****************************************************** -->
-    <div id="getting-around">
-      <h3 class="title">Ways of Traveling</h3>
-      <p>
-        Here are three ways you can use to travel around Alaska represented by
-        font awesome icons. There are many more ways of traveling, but here are
-        three that fit nicely in this section and have icons that you can
-        manipulate like fonts in CSS.
-      </p>
-      <ul class="grid">
-        <li>
-          <i class="fas fa-plane ico"></i>
-          <h4>Airplane</h4>
-          <p>
-            A powered flying vehicle with fixed wings and a weight greater than
-            that of the air it displaces.
-          </p>
-        </li>
-        <li>
-          <i class="fas fa-ship ico"></i>
-          <h4>Cruise Ships</h4>
-          <p>
-            A passenger ship used for pleasure voyages, where the voyage itself
-            and the ship's amenities are a part of the experience.
-          </p>
-        </li>
-        <li>
-          <i class="fas fa-taxi ico"></i>
-          <h4>Taxis</h4>
-          <p>
-            A motor vehicle licensed to transport passengers in return for
-            payment of a fare.
-          </p>
-        </li>
-      </ul>
-    </div>
-    <hr />
+
     <!-- ****************************************************** -->
     <div id="famous-quotes">
-      <h3 class="title">What Outhers Our Saying</h3>
+      <h3 class="title">What Others Our Saying</h3>
       <p class="portrait">
-        <img
-          src="img/dickens.jpg"
-          alt="Charles Dickens"
-          class="portrait-photos"
-        />
+        <img src="img/battuta.jpg" alt="Ibn Battuta" class="portrait-photos" />
       </p>
       <p class="quote">
-        &ldquo;No one is useless in this world who lightens the burden of it to
-        anyone else.&rdquo;
+        &ldquo;Traveling – it leaves you speechless, then turns you into a
+        storyteller.&rdquo;
       </p>
-      <p class="author">&mdash; Charles Dickens</p>
+      <p class="author">&mdash; Ibn Battuta</p>
       <p class="portrait">
         <img
           src="img/franklin.jpg"
@@ -137,7 +216,8 @@
         />
       </p>
       <p class="quote">
-        &ldquo;An investment in knowledge pays the best interest.&rdquo;
+        &ldquo;Tell me and I forget, teach me and I may remember, involve me and
+        I learn.&rdquo;
       </p>
       <p class="author">&mdash; Benjamin Frankin</p>
       <p class="portrait">
@@ -153,10 +233,19 @@
     </div>
     <!-- ****************************************************** -->
     <div id="contact">
-      <iframe
+      <!-- <iframe
         src="https://docs.google.com/forms/d/e/1FAIpQLSdsDiKOPB9ChNg0lvhtBkTtKl5VaSYkt-wFf2CcAUlqVZArLg/viewform?embedded=true"
         width="100%"
         height="1250"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+        >Ładuję…</iframe
+      > -->
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSdsDiKOPB9ChNg0lvhtBkTtKl5VaSYkt-wFf2CcAUlqVZArLg/viewform?embedded=true"
+        width="100%"
+        height="700"
         frameborder="0"
         marginheight="0"
         marginwidth="0"
@@ -204,10 +293,29 @@
         </script>
         It sure is fun creating websites.
       </p>
-      <p>
-        &ldquo; Tell me and I forget, teach me and I may remember, involve me
-        and I learn.&rdquo; &mdash;Benjamin Franklin
-      </p>
     </footer>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('a[href^="#"]').on("click", function(e) {
+          e.preventDefault();
+
+          var target = this.hash;
+          var $target = $(target);
+
+          $("html, body")
+            .stop()
+            .animate(
+              {
+                scrollTop: $target.offset().top - 100
+              },
+              900,
+              "swing",
+              function() {
+                window.location.hash = target - 100;
+              }
+            );
+        });
+      });
+    </script>
   </body>
 </html>
